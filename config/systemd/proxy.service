@@ -1,0 +1,17 @@
+[Unit]
+Description=GO Proxy
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/proxy/go-proxy.env
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/local/sbin/go-proxy
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=go-proxy
+
+[Install]
+WantedBy=multi-user.target
