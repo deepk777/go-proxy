@@ -48,8 +48,6 @@ openssl req -x509 -newkey rsa:2048 -keyout nssaproxy.key.pem -out goproxy.crt.pe
 
 ### Installing
 
-
-
 ```
 git clone https://github.com/deepk777/go-proxy
 go build -o goproxy cmd/main.go
@@ -115,7 +113,6 @@ curl --key "client.key" --cert "client.crt" -X POST \
 }'
 ```
 
-
 ## Built With
 
 * [Golang](https://golang.org) - The Google Go Language
@@ -125,7 +122,6 @@ curl --key "client.key" --cert "client.crt" -X POST \
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/deepk777/go-proxy/tags). 
-
 
 
 ## Acknowledgments
