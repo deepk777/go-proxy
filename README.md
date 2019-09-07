@@ -14,7 +14,8 @@
 
 ## Overview 
 
-This project aimed to create a lightweight web service written in golang running on public cloud (AWS EC2) listening over a port 443. Proxy uses [Mutual TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake) to authenticate client. There is scope for adding authentication middleware. On success, request is forwarded with required headers to target host.
+This project aimed to create a lightweight web service written in golang listening over a port 443. Proxy uses [Mutual TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake) to authenticate client. There is scope for adding authentication middleware. On success, request is forwarded with required headers to target host.
+It follows the famous onion architecture.
 
 ## Endpoints
 ### Mutual TLS
