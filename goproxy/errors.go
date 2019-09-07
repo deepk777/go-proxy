@@ -10,7 +10,7 @@ var (
 	//ErrInvalidContentType will be returned in case of content type is not application/json
 	ErrInvalidContentType = errors.New("invalid content type")
 
-	//ErrMissingTargetURL will be returned in case of target campaign host is not empty
+	//ErrMissingTargetURL will be returned in case of target host is not empty
 	ErrMissingTargetURL = errors.New("missing target URL in request body")
 
 	//ErrJSONUnMarshall will be returned in case of failed json parsing.
