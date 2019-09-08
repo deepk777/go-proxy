@@ -1,5 +1,5 @@
 # Go Proxy
-
+[![Go Report Card](https://goreportcard.com/badge/github.com/deepk777/go-proxy?style=flat-square)](https://goreportcard.com/badge/github.com/deepk777/go-proxy)
 
 **Table of Contents**
 
