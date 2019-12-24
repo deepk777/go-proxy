@@ -8,3 +8,5 @@ require (
 	github.com/peterbourgon/ff v1.6.0
 	github.com/pkg/errors v0.8.1
 )
+
+go 1.13

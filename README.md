@@ -4,6 +4,7 @@
 **Table of Contents**
 
 - [Overview](#overview)
+- [Usage](#usage)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installing](#installing)
@@ -16,6 +17,31 @@
 
 This project aimed to create a lightweight web service written in golang listening over a port 443. Proxy uses [Mutual TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security#Client-authenticated_TLS_handshake) to authenticate client. There is scope for adding authentication middleware. On success, request is forwarded with required headers to target host.
 It follows the famous onion architecture.
+
+## Usage
+This proxy can be used for sending any request payload to target host and returning back any response payload. 
+All you have to do is add request payload into `task` key and response payload from target host into `message` key.
+
+For more information check 
+#### Request Body Payload Struct 
+
+```
+type Body struct {
+	TargetURL string           `json:"target"`
+	Task      *json.RawMessage `json:"task"`
+}
+```
+
+#### Response Body Payload Struct
+```
+type ReceiveAndForwardResponse struct {
+	Status           int              `json:"status,omitempty"`
+	Message          *json.RawMessage `json:"message,omitempty"`
+	Reason           string           `json:"reason,omitempty"`
+	Error            int              `json:"error,omitempty"`
+	ErrorDescription error
+}
+```
 
 ## Endpoints
 ### Mutual TLS
